@@ -20,6 +20,7 @@
             <th class="text-center">#</th>
             <th class="text-center">Lng</th>
             <th class="text-center">Lat</th>
+            <th class="text-center">+</th>
           </tr>
         </thead>
         <tbody>
@@ -28,18 +29,27 @@
                 :key="index"
                 @mouseover="$emit('update:markerIndex', index)"
           >
-            <td>{{ index }}</td>
-            <td>
+            <td v-if="index > 0">{{ index }}</td>
+            <td v-if="index > 0">
               <v-text-field
                   v-model="points[index][0]"
                   @input="inputHandler(index, 0, $event)">
               </v-text-field>
             </td>
-            <td>
+            <td v-if="index > 0">
               <v-text-field
                   v-model="points[index][1]"
                   @input="inputHandler(index, 1, $event)">
               </v-text-field>
+            </td>
+            <td v-if="index > 0">
+              <v-btn
+                  @click="addNewPoint(index)"
+                  color="#09b"
+                  text
+              >
+              +
+              </v-btn>
             </td>
           </tr>
         </tbody>
@@ -87,7 +97,7 @@ export default {
     VSimpleTable,
     VTextField
   },
-  props: ['type', 'coordinates', 'markerIndex', 'markerCoordinates'],
+  props: ['id', 'type', 'coordinates', 'markerIndex', 'markerCoordinates'],
   data () {
     return {
       points: null,
@@ -105,7 +115,6 @@ export default {
         return this.type
       },
       set (val) {
-        console.log(val)
         this.$emit('update:type', val)
       }
     }
@@ -131,10 +140,22 @@ export default {
       }
     },
     localType (val) {
+      localStorage.updateFeatureType(this.id, val)
       this.$emit('update:type', val)
     }
   },
   methods: {
+    addNewPoint: function (index) {
+      const next = (index === this.points - 1) ? 0 : index + 1
+      const coords = [
+        (this.points[index][0] + this.points[next][0]) / 2,
+        (this.points[index][1] + this.points[next][1]) / 2
+      ]
+      this.points.splice(next, 0, coords)
+      localStorage.setFeatureById(this.id, this.points, this.type)
+      this.$parent.$parent.map.updateSelectedPolygonPath(this.points)
+      this.$parent.$parent.map.createMarkers()
+    },
     inputHandler (pointIndex, coord, val) {
       this.points[pointIndex][coord] = parseFloat(val)
       this.$emit('update:markerCoordinates', this.points[pointIndex])

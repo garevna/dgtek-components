@@ -26,19 +26,12 @@ data: () => ({
 }),
 watch: {
   saveData (val) {
-    if (val) this.saveData()
+    if (val) this.savePolygons()
   }
 },
 methods: {
-  async saveData () {
-    const polygons = {
-      features: [],
-      type: 'FeatureCollection'
-    }
-    polygons.features = ['ServiceAvailable', 'BuildCommenced', 'ComingSoon']
-      .flatMap(collectionType => localStorage.getFeaturesByType(collectionType))
-
-    await axios.post(..., { data: JSON.stringify(polygons) })
+  async savePolygons () {
+    await axios.post(..., { data: JSON.stringify(localStorage.getAllPolygons()) })
     this.saveData = false
   }
 }

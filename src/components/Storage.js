@@ -14,6 +14,20 @@ Storage.prototype.getFeatureById = function (featureId) {
   }
 }
 
+Storage.prototype.setFeatureById = function (featureId, coordinates, type) {
+  this.setItemByName(featureId, {
+    geometry: {
+      coordinates: [coordinates],
+      type: 'Polygon'
+    },
+    properties: {
+      typeOf: type,
+      id: featureId
+    },
+    type: 'Feature'
+  })
+}
+
 Storage.prototype.getFeaturesByType = function (type) {
   return this.getItemByName(type)
     .map(id => this.getItemByName(id))
@@ -94,6 +108,16 @@ Storage.prototype.updateMarkerCoordinates = function (featureId, markerIndex, ma
     markerIndex,
     markerCoordinates
   })
+}
+
+Storage.prototype.getAllPolygons = function () {
+  const polygons = {
+    features: [],
+    type: 'FeatureCollection'
+  }
+  polygons.features = ['ServiceAvailable', 'BuildCommenced', 'ComingSoon']
+    .flatMap(collectionType => localStorage.getFeaturesByType(collectionType))
+  return polygons
 }
 
 Storage.prototype.emit = function (data) {

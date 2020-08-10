@@ -5,26 +5,31 @@
         <div id="dgtek-container-for-map"></div>
       </v-col>
       <v-col cols="12" lg="5">
-        <SelectedPolygon
-              v-if="selectedPolygonId"
-              :coordinates="coordinates"
-              :type.sync="polygonType"
-              :markerIndex.sync="selectedMarkerIndex"
-              :markerCoordinates.sync="selectedMarkerCoordinates"
-        />
+        <v-card flat class="my-4">
+          <SelectedPolygon
+                v-if="selectedPolygonId"
+                :id="selectedPolygonId"
+                :coordinates="coordinates"
+                :type.sync="polygonType"
+                :markerIndex.sync="selectedMarkerIndex"
+                :markerCoordinates.sync="selectedMarkerCoordinates"
+          />
+        </v-card>
+        <v-card flat class="mx-auto my-2">
+          <Button
+                :clicked.sync="newPolygon"
+                color="#09b"
+                v-if="drawingModeAvailable"
+                text="Create new polygon"
+          />
+          <Button
+                :clicked.sync="removePolygon"
+                v-if="selectedPolygonId"
+                text="Remove polygon"
+          />
+        </v-card>
       </v-col>
     </v-row>
-    <Button
-          :clicked.sync="newPolygon"
-          color="#09b"
-          v-if="drawingModeAvailable"
-          text="Create new polygon"
-    />
-    <Button
-          :clicked.sync="removePolygon"
-          v-if="selectedPolygonId"
-          text="Remove polygon"
-    />
     <Button
           :clicked.sync="save"
           text="SAVE"
@@ -33,7 +38,6 @@
 </template>
 
 <style scoped>
-
 </style>
 
 <script>
@@ -43,16 +47,19 @@ import Map from '@/components/map.js'
 import SelectedPolygon from '@/components/SelectedPolygon.vue'
 import Button from '@/components/Button.vue'
 
+import { VContainer, VRow, VCol, VCard } from 'vuetify/lib'
+
 export default {
   name: 'Polygons',
-
   components: {
+    VContainer,
+    VRow,
+    VCol,
+    VCard,
     SelectedPolygon,
     Button
   },
-
   props: ['saveData'],
-
   data: () => ({
     container: null,
     map: null,
@@ -65,7 +72,6 @@ export default {
     newPolygon: false,
     removePolygon: false
   }),
-
   computed: {
     drawingModeAvailable () {
       return !!this.map && !this.map.drawingMode && !this.selectedPolygonId
@@ -87,7 +93,6 @@ export default {
       }
     }
   },
-
   watch: {
     selectedMarkerCoordinates: {
       deep: true,
@@ -112,9 +117,7 @@ export default {
       this.removePolygon = false
     }
   },
-
   methods: {
-
     async getData () {
       localStorage.clear();
       ['ServiceAvailable', 'BuildCommenced', 'ComingSoon'].forEach(item => localStorage.setItemByName(item, []))
@@ -127,23 +130,19 @@ export default {
       })
       window.dispatchEvent(new Event('data-ready'))
     },
-
     selectedPolygonCallback (event) {
       if (!event.polygonId) return
       this.selectedPolygonId = event.polygonId
       this.coordinates = localStorage.getFeatureCoordinates(this.selectedPolygonId)
     },
-
     markerPositionChangedHandler (event) {
       this.coordinates[event.details.markerIndex] = event.details.markerCoordinates
       this.selectedMarkerIndex = event.details.markerIndex
       this.selectedMarkerCoordinates = event.details.markerCoordinates
     },
-
     emptySpaceClick (event) {
       this.selectedPolygonId = undefined
     },
-
     deletePolygon () {
       for (const type of ['ServiceAvailable', 'BuildCommenced', 'ComingSoon']) {
         const collection = localStorage.getItemByName(type)
@@ -155,7 +154,6 @@ export default {
         this.map.removePolygon(type, this.selectedPolygonId)
       }
     },
-
     initMap () {
       const container = document.getElementById('dgtek-container-for-map')
       if (container) {
@@ -164,14 +162,12 @@ export default {
         this.container = document.body.appendChild(document.createElement('div'))
         this.container.id = 'dgtek-container-for-map'
       }
-
       this.container.addEventListener('polygon-selected', this.selectedPolygonCallback)
       this.container.addEventListener('marker-position-changed', this.markerPositionChangedHandler.bind(this))
       this.container.addEventListener('empty-field-click', this.emptySpaceClick)
       this.container.addEventListener('new-polygon', this.addNewPolygon)
       this.container.addEventListener('drawing-mode-on', this.switchDrawingMode.bind(this))
       this.container.addEventListener('drawing-mode-off', this.switchDrawingMode.bind(this))
-
       this.map = new Map({
         container: this.container,
         width: window.innerWidth / 2,
@@ -183,7 +179,6 @@ export default {
         },
         center: { lat: -37.8357725, lng: 144.9738764 }
       })
-
       this.container.addEventListener('polygon-type-changed', this.map.changePolygonType.bind(this.map))
       this.container.addEventListener('marker-coordinates-changed', this.map.changeMarkerCoordinates.bind(this.map))
       this.container.addEventListener('show-marker', this.map.showMarker.bind(this.map))
@@ -192,11 +187,10 @@ export default {
       this.drawingMode = event.type === 'drawing-mode-on'
     }
   },
-
   beforeMount () {
+    // location.reload()
     this.getData()
   },
-
   mounted () {
     window.addEventListener('data-ready', this.initMap)
     this.buttonText = 'Create new polygon'
