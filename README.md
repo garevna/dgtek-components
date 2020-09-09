@@ -15,10 +15,7 @@ import 'dgtek-styles/css/variables.scss'
 ```
 
 ###### App.vue
-```
-import 'dgtek-styles/css/main.css'
-```
-or simply
+
 ```
 import 'dgtek-styles'
 ```
