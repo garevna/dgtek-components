@@ -3612,6 +3612,24 @@ detect-node@^2.0.4:
   resolved "https://registry.yarnpkg.com/detect-node/-/detect-node-2.0.4.tgz#014ee8f8f669c5c58023da64b8179c083a28c46c"
   integrity sha512-ZIzRpLJrOj7jjP2miAtgqIfmzbxa4ZOr5jJc601zklsfEx9oTzmmj2nVpIPRpNlRTIh8lc1kyViIY7BWSGNmKw==
 
+dgtek-popup@^0.0.1:
+  version "0.0.1"
+  resolved "https://registry.yarnpkg.com/dgtek-popup/-/dgtek-popup-0.0.1.tgz#123db8a8f6bcdfceaf44f85c7389d1601fbcfc50"
+  integrity sha512-DWpq3DGy34vuGJOsClR94zQ1ew69rIt6K7VzVKJ9lI04dl7j51NizQneHhxXAtduIeuzW4QI5D+4w+/1CJzcRA==
+  dependencies:
+    core-js "^3.6.5"
+    vue "^2.6.11"
+    vuetify "^2.2.11"
+
+dgtek-styles@^0.0.1:
+  version "0.0.1"
+  resolved "https://registry.yarnpkg.com/dgtek-styles/-/dgtek-styles-0.0.1.tgz#c6da1dd055601d6602c271d6439e8eb54d6f56ee"
+  integrity sha512-vHBZu2OTQuV0XI1f5/w/zFJJTyesPOYIP3pQZT9xhYP5BBbKBLZDu3AjAXSi6mVWdFDyd8vPP79wu6SLNweaUQ==
+  dependencies:
+    core-js "^3.6.5"
+    vue "^2.6.11"
+    vuetify "^2.2.11"
+
 diff-sequences@^24.9.0:
   version "24.9.0"
   resolved "https://registry.yarnpkg.com/diff-sequences/-/diff-sequences-24.9.0.tgz#5715d6244e2aa65f48bba0bc972db0b0b11e95b5"
@@ -10310,11 +10328,6 @@ vue-loader@^15.9.2:
     loader-utils "^1.1.0"
     vue-hot-reload-api "^2.3.0"
     vue-style-loader "^4.1.0"
-
-vue-select@^3.10.7:
-  version "3.10.7"
-  resolved "https://registry.yarnpkg.com/vue-select/-/vue-select-3.10.7.tgz#58d756a7159bf923ce99abf74c5d6309ea998136"
-  integrity sha512-6rvIYBNEp9y0xK/sq2ZzDCxKA2BoVNliyctOeMtzarQzvpLlab7l8zvqr2jhGZOxozp7jd2AvZxpF3Ivems2wQ==
 
 vue-style-loader@^4.1.0, vue-style-loader@^4.1.2:
   version "4.1.2"

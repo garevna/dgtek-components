@@ -13,8 +13,8 @@
 
 <script>
 
-import 'pineapple-styles'
-import 'pineapple-popup'
+import 'dgtek-styles'
+import 'dgtek-popup'
 
 import UserContact from '@/components/UserContact.vue'
 

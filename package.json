@@ -1,22 +1,22 @@
 {
-  "name": "dgtek-polygons",
-  "version": "1.0.9",
+  "name": "dgtek-contact-form",
+  "version": "0.0.1",
   "description": "Component for npm registry",
   "author": "garevna <irina.h.fylyppova@gmail.com>",
   "keywords": [
     "dgtek",
-    "polygons",
+    "contact",
     "component",
     "npm",
     "registry",
-    "google map"
+    "form"
   ],
-  "repository": "https://github.com/garevna/dgtek-components/tree/polygons",
-  "main": "./dist/dgtek-polygons.common.js",
+  "repository": "https://github.com/garevna/dgtek-components/tree/contact-form",
+  "main": "./dist/dgtek-contact-form.common.js",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "package": "vue-cli-service build --target lib --name dgtek-polygons ./src/components/polygons-index.js",
+    "package": "vue-cli-service build --target lib --name dgtek-contact-form ./src/components/contact-form-index.js",
     "test:unit": "vue-cli-service test:unit",
     "lint": "vue-cli-service lint"
   },
@@ -27,8 +27,9 @@
   ],
   "dependencies": {
     "core-js": "^3.6.5",
+    "dgtek-popup": "^0.0.1",
+    "dgtek-styles": "^0.0.1",
     "vue": "^2.6.11",
-    "vue-select": "^3.10.7",
     "vuetify": "^2.2.11"
   },
   "devDependencies": {
