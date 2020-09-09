@@ -118,6 +118,9 @@ h4 {
 
 import { VCard, VCardText, VProgressLinear, VBtn } from 'vuetify/lib'
 
+import 'dgtek-popup'
+import 'dgtek-popup/dist/dgtek-popup.css'
+
 import NumberInput from './contact/Number.vue'
 import List from './contact/List.vue'
 import Combo from './contact/Combo.vue'
@@ -261,7 +264,7 @@ export default {
     },
 
     async sendUserRequest () {
-      // if (location.host.indexOf('pineapple.net.au') < 0) {
+      // if (location.host.indexOf('dgtek.net') < 0) {
       //   this.popupType = 'disabled'
       //   this.popupOpened = true
       //   return

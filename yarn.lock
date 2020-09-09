@@ -3621,14 +3621,10 @@ dgtek-popup@^0.0.1:
     vue "^2.6.11"
     vuetify "^2.2.11"
 
-dgtek-styles@^0.0.4:
-  version "0.0.4"
-  resolved "https://registry.yarnpkg.com/dgtek-styles/-/dgtek-styles-0.0.4.tgz#ffd3b56c993037bacd862e6b29980bcecd6a3ac6"
-  integrity sha512-a4gHojZpdW3L9XFr9DWRkaAbtaWIXnxdWVNGnug6Xcx5dl+p+KyQnadKXHZymZbSfSlsTaXkY1yC7fAU1TPAsA==
-  dependencies:
-    core-js "^3.6.5"
-    vue "^2.6.11"
-    vuetify "^2.2.11"
+dgtek-styles@^0.0.5:
+  version "0.0.5"
+  resolved "https://registry.yarnpkg.com/dgtek-styles/-/dgtek-styles-0.0.5.tgz#6197ab80dcc01c3eb1a1f84db4a9bd27dc2c3516"
+  integrity sha512-jdYkBaYQhQq/Zz/uUZk4DktM5kZ97Ss70XBcFpBOBY3yDe+XnLLpUT42YJZKDuoJpAD5QNK9ZsMrbARbmvJf2w==
 
 diff-sequences@^24.9.0:
   version "24.9.0"

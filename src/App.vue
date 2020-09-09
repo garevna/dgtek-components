@@ -26,20 +26,31 @@ export default {
   },
 
   data: () => ({
-    saveData: false
+    userForm: null,
+    emailSubject: '',
+    emailText: '',
+    mailEndpoint: 'https://dka.dgtek.net/api/frontend/mail/land'
   }),
 
   watch: {
-    saveData (val) {
-      if (val) this.save()
-    }
+    // saveData (val) {
+    //   if (val) this.save()
+    // }
   },
 
   methods: {
-    async save () {
-      console.log(localStorage.getAllPolygons())
-      this.saveData = false
+    async getData () {
+      const content = await (await fetch('https://api.pineapple.net.au/content/dgtek-1')).json()
+      Object.keys(content).forEach((item) => {
+        sessionStorage.setItem(item, JSON.stringify(content[item]))
+      })
+      this.emailSubject = content.emailSubject
+      this.emailText = content.emailText
+      this.userForm = content.userForm
     }
+  },
+  beforeMount () {
+    this.getData()
   }
 }
 </script>
