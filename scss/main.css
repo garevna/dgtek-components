@@ -1,0 +1,85 @@
+html, body {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background: #E5E5E5;
+  overflow-x:hidden;
+}
+
+.theme--light.v-application {
+  background: #FBFBFB!important;
+}
+
+.container {
+  padding: 0!important;
+}
+
+section {
+  width: 100%;
+}
+
+h1, h2, h3, h4, h5, p {
+  font-family: 'Gilroy';
+  letter-spacing: 0.02rem;
+  line-height: 150%;
+  font-style: normal;
+  color: #000;
+}
+
+h1 {
+  font-size: 56px;
+  font-weight: 900;
+}
+h2 {
+  font-size: 42px;
+  font-weight: 600;
+}
+h3 {
+  font-size: 24px;
+  font-weight: 300;
+}
+h4 {
+  font-size: 24px;
+  font-weight: bold;
+}
+h5 {
+  font-size: 24px;
+  font-weight: medium;
+}
+p {
+  font-weight: normal;
+  font-size: 18px;
+  color: #665566;
+}
+
+@media screen and (max-width: 900px) {
+  h1 {
+    font-size: 36px;
+  }
+  h2 { font-size: 28px; }
+  h3 { font-size: 24px; }
+  h4, h5 { font-size: 18px; }
+  p { font-size: 16px; }
+}
+
+@media screen and (max-width: 360px) {
+  p { font-size: 14px; }
+}
+
+.v-card__title, h1, h4, h3, h4, h5, p {
+  word-break: normal!important;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #83332C;
+}
+::-webkit-scrollbar-thumb {
+  background: #E15240;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #E5E5E5;
+}

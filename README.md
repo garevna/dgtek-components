@@ -1,42 +1,24 @@
-# dgtek-polygons
+# dgtek-styles
 
-### Install
-```
-yarn add dgtek-polygons
-```
+##### Styles should be utilized in dgtek.net projects only.
 
-### Import
-
+### install component
 ```
-import 'dgtek-polygons'
-import 'dgtek-polygons/dist/dgtek-polygons.css'
+yarn add dgtek-styles
 ```
+### Import styles
 
-### Usage
-
+###### main.js
 ```
-<Polygons :saveData.sync="saveData" />
+import 'dgtek-styles/css/fonts.scss'
+import 'dgtek-styles/css/variables.scss'
 ```
 
-### App.vue
-
+###### App.vue
 ```
-data: () => ({
-  saveData: false
-}),
-watch: {
-  saveData (val) {
-    if (val) this.savePolygons()
-  }
-},
-methods: {
-  async savePolygons () {
-    await axios.post(..., { data: JSON.stringify(localStorage.getAllPolygons()) })
-    this.saveData = false
-  }
-}
+import 'dgtek-styles/css/main.css'
 ```
-
-______________________________________________
-
-## [Demo](https://garevna.github.io/dgtek-polygons-editor-demo/)
+or simply
+```
+import 'dgtek-styles'
+```

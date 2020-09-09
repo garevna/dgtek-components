@@ -13,8 +13,8 @@
 
 <script>
 
-import 'pineapple-styles'
-import 'pineapple-popup'
+import 'dgtek-styles'
+import 'dgtek-popup'
 
 import UserContact from '@/components/UserContact.vue'
 
@@ -23,23 +23,6 @@ export default {
 
   components: {
     UserContact
-  },
-
-  data: () => ({
-    saveData: false
-  }),
-
-  watch: {
-    saveData (val) {
-      if (val) this.save()
-    }
-  },
-
-  methods: {
-    async save () {
-      console.log(localStorage.getAllPolygons())
-      this.saveData = false
-    }
   }
 }
 </script>

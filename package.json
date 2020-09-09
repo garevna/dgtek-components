@@ -1,22 +1,21 @@
 {
-  "name": "dgtek-polygons",
-  "version": "1.0.9",
+  "name": "dgtek-styles",
+  "version": "0.0.4",
   "description": "Component for npm registry",
   "author": "garevna <irina.h.fylyppova@gmail.com>",
   "keywords": [
     "dgtek",
-    "polygons",
+    "styles",
     "component",
     "npm",
-    "registry",
-    "google map"
+    "registry"
   ],
-  "repository": "https://github.com/garevna/dgtek-components/tree/polygons",
-  "main": "./dist/dgtek-polygons.common.js",
+  "repository": "https://github.com/garevna/dgtek-components/tree/styles",
+  "main": "./css/main.css",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "package": "vue-cli-service build --target lib --name dgtek-polygons ./src/components/polygons-index.js",
+    "package": "node-sass --omit-source-map-url scss/main.css dist/main.css",
     "test:unit": "vue-cli-service test:unit",
     "lint": "vue-cli-service lint"
   },
@@ -28,7 +27,6 @@
   "dependencies": {
     "core-js": "^3.6.5",
     "vue": "^2.6.11",
-    "vue-select": "^3.10.7",
     "vuetify": "^2.2.11"
   },
   "devDependencies": {
