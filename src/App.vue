@@ -1,44 +1,62 @@
 <template>
   <v-app>
     <v-main id="dgtek-polygons">
-      <UserContact
-        :userForm="userForm"
-        :emailSubject="emailSubject"
-        :emailText="emailText"
-        :emailEndpoint="mailEndpoint"
-    />
+      <Button
+        text="Success"
+        :clicked="successClicked"
+        color="#09b"
+      />
+      <Button
+        text="Error"
+        :clicked="errorClicked"
+        color="#900"
+      />
+      <Button
+        text="Error"
+        :clicked="disabledClicked"
+        color="#444"
+      />
+      <Popup
+          :opened.sync="opened"
+          :type="type"
+      />
     </v-main>
   </v-app>
 </template>
 
 <script>
 
-import 'pineapple-styles'
-import 'pineapple-popup'
+import 'dgtek-styles'
 
-import UserContact from '@/components/UserContact.vue'
+import Button from '@/components/Button.vue'
 
 export default {
   name: 'App',
 
   components: {
-    UserContact
+    Button
   },
 
   data: () => ({
-    saveData: false
+    type: 'error',
+    opened: false,
+    successClicked: false,
+    errorClicked: false,
+    disabledClicked: false
   }),
 
   watch: {
-    saveData (val) {
-      if (val) this.save()
-    }
-  },
-
-  methods: {
-    async save () {
-      console.log(localStorage.getAllPolygons())
-      this.saveData = false
+    successClicked (val) {
+      this.type = 'success'
+      this.opened = true
+    },
+    errorClicked (val) {
+      this.type = 'error'
+      this.opened = true
+    },
+    disabledClicked (val) {
+      this.type = 'disabled'
+      this.opened = true
     }
   }
 }

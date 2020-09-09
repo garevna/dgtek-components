@@ -1,8 +1,8 @@
 import Vue from 'vue'
-import UserContact from './UserContact.vue'
+import Popup from './Popup.vue'
 
 const Components = {
-  UserContact
+  Popup
 }
 
 Object.keys(Components).forEach(name => {

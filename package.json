@@ -1,6 +1,6 @@
 {
   "name": "dgtek-popup",
-  "version": "0.0.1",
+  "version": "0.0.4",
   "description": "Component for npm registry",
   "author": "garevna <irina.h.fylyppova@gmail.com>",
   "keywords": [
@@ -14,10 +14,7 @@
   "main": "./dist/dgtek-popup.common.js",
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "package": "vue-cli-service build --target lib --name dgtek-popup ./src/components/popup-index.js",
-    "test:unit": "vue-cli-service test:unit",
-    "lint": "vue-cli-service lint"
+    "package": "vue-cli-service build --target lib --name dgtek-popup ./src/components/popup-index.js"
   },
   "files": [
     "dist/*",
@@ -26,6 +23,7 @@
   ],
   "dependencies": {
     "core-js": "^3.6.5",
+    "dgtek-styles": "^0.0.5",
     "vue": "^2.6.11",
     "vuetify": "^2.2.11"
   },

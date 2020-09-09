@@ -1,17 +1,19 @@
 # dgtek-popup
 
-<sup>This component is designed to be utilized in dgtek.net projects only.<br>
-It should not be used outside the dgtek.net and landing pages of **dgtek.net**</sup>
+This component is designed to be utilized in dgtek.net projects only.
+
+It should not be used outside the dgtek.net and landing pages of **dgtek.net**
 
 ## Install the component
 
-```
+```js
 yarn add dgtek-popup
 ```
 
-#### Add with <script> tag
+#### Add with _script_ tag
+
 ###### (Not recommended)
-```
+```html
 <script src="https://registry.npmjs.org/dgtek-popup"></script>
 ```
 
@@ -19,14 +21,14 @@ yarn add dgtek-popup
 
 ###### It'll be the global component Popup
 
-```
+```js
 import 'dgtek-popup'
 import 'dgtek-popup/dist/dgtek-popup.css'
 ```
 
 ### Node.js
 
-```
+```js
 const Popup = require('dgtek-popup')
 const PopupStyles = require('dgtek-popup/dist/dgtek-popup.css')
 ```
@@ -34,47 +36,28 @@ const PopupStyles = require('dgtek-popup/dist/dgtek-popup.css')
 ## Usage
 
 ###### Success (form has been submitted)
-```
+```html
 <Popup type="success" :opened="popupOpened" />
 ```
 ###### Error (contact form error)
-```
+```html
 <Popup type="error" :opened="popupOpened" />
 ```
 ###### Disabled (contact form submission is disabled)
-```
+```html
 <Popup type="disabled" :opened="popupOpened" />
 ```
 ###### Any other message
 
 You can send any info to component Popup through the prop `data`
-```
+```html
 <Popup :data="popupContent" :opened="popupOpened" />
 ```
 where
-```
+```js
 popupContent: {
   header: '...',
   color: '#000',
   text: '...'
 }
-```
-
-________________________
-
-#### You can add the global styles and fonts to the project from this package
-
-You can install the fonts and variables of pineapple.net.au projects so:
-
-###### main.js
-```
-import 'pineapple-popup/css/fonts.scss'
-import 'pineapple-popup/css/variables.scss'
-```
-
-You can install global styles of pineapple.net.au projects so:
-
-###### App.vue
-```
-import 'pineapple-popup/css/main.css'
 ```

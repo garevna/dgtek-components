@@ -3612,6 +3612,11 @@ detect-node@^2.0.4:
   resolved "https://registry.yarnpkg.com/detect-node/-/detect-node-2.0.4.tgz#014ee8f8f669c5c58023da64b8179c083a28c46c"
   integrity sha512-ZIzRpLJrOj7jjP2miAtgqIfmzbxa4ZOr5jJc601zklsfEx9oTzmmj2nVpIPRpNlRTIh8lc1kyViIY7BWSGNmKw==
 
+dgtek-styles@^0.0.5:
+  version "0.0.5"
+  resolved "https://registry.yarnpkg.com/dgtek-styles/-/dgtek-styles-0.0.5.tgz#6197ab80dcc01c3eb1a1f84db4a9bd27dc2c3516"
+  integrity sha512-jdYkBaYQhQq/Zz/uUZk4DktM5kZ97Ss70XBcFpBOBY3yDe+XnLLpUT42YJZKDuoJpAD5QNK9ZsMrbARbmvJf2w==
+
 diff-sequences@^24.9.0:
   version "24.9.0"
   resolved "https://registry.yarnpkg.com/diff-sequences/-/diff-sequences-24.9.0.tgz#5715d6244e2aa65f48bba0bc972db0b0b11e95b5"
