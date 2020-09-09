@@ -1,42 +1,80 @@
-# dgtek-polygons
+# dgtek-popup
 
-### Install
-```
-yarn add dgtek-polygons
-```
+<sup>This component is designed to be utilized in dgtek.net projects only.<br>
+It should not be used outside the dgtek.net and landing pages of **dgtek.net**</sup>
 
-### Import
+## Install the component
 
 ```
-import 'dgtek-polygons'
-import 'dgtek-polygons/dist/dgtek-polygons.css'
+yarn add dgtek-popup
 ```
 
-### Usage
+#### Add with <script> tag
+###### (Not recommended)
+```
+<script src="https://registry.npmjs.org/dgtek-popup"></script>
+```
+
+## Import the component and it's styles
+
+###### It'll be the global component Popup
 
 ```
-<Polygons :saveData.sync="saveData" />
+import 'dgtek-popup'
+import 'dgtek-popup/dist/dgtek-popup.css'
 ```
 
-### App.vue
+### Node.js
 
 ```
-data: () => ({
-  saveData: false
-}),
-watch: {
-  saveData (val) {
-    if (val) this.savePolygons()
-  }
-},
-methods: {
-  async savePolygons () {
-    await axios.post(..., { data: JSON.stringify(localStorage.getAllPolygons()) })
-    this.saveData = false
-  }
+const Popup = require('dgtek-popup')
+const PopupStyles = require('dgtek-popup/dist/dgtek-popup.css')
+```
+
+## Usage
+
+###### Success (form has been submitted)
+```
+<Popup type="success" :opened="popupOpened" />
+```
+###### Error (contact form error)
+```
+<Popup type="error" :opened="popupOpened" />
+```
+###### Disabled (contact form submission is disabled)
+```
+<Popup type="disabled" :opened="popupOpened" />
+```
+###### Any other message
+
+You can send any info to component Popup through the prop `data`
+```
+<Popup :data="popupContent" :opened="popupOpened" />
+```
+where
+```
+popupContent: {
+  header: '...',
+  color: '#000',
+  text: '...'
 }
 ```
 
-______________________________________________
+________________________
 
-## [Demo](https://garevna.github.io/dgtek-polygons-editor-demo/)
+#### You can add the global styles and fonts to the project from this package
+
+You can install the fonts and variables of pineapple.net.au projects so:
+
+###### main.js
+```
+import 'pineapple-popup/css/fonts.scss'
+import 'pineapple-popup/css/variables.scss'
+```
+
+You can install global styles of pineapple.net.au projects so:
+
+###### App.vue
+```
+import 'pineapple-popup/css/main.css'
+```
