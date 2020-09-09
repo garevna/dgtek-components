@@ -1,6 +1,6 @@
 {
   "name": "dgtek-popup",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Component for npm registry",
   "author": "garevna <irina.h.fylyppova@gmail.com>",
   "keywords": [
@@ -23,7 +23,7 @@
   ],
   "dependencies": {
     "core-js": "^3.6.5",
-    "dgtek-styles": "^0.0.5",
+    "dgtek-styles": "^0.0.8",
     "vue": "^2.6.11",
     "vuetify": "^2.2.11"
   },

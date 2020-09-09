@@ -3,17 +3,17 @@
     <v-main id="dgtek-polygons">
       <Button
         text="Success"
-        :clicked="successClicked"
+        :clicked.sync="successClicked"
         color="#09b"
       />
       <Button
         text="Error"
-        :clicked="errorClicked"
+        :clicked.sync="errorClicked"
         color="#900"
       />
       <Button
-        text="Error"
-        :clicked="disabledClicked"
+        text="Disabled"
+        :clicked.sync="disabledClicked"
         color="#444"
       />
       <Popup
@@ -29,12 +29,14 @@
 import 'dgtek-styles'
 
 import Button from '@/components/Button.vue'
+import Popup from '@/components/Popup.vue'
 
 export default {
   name: 'App',
 
   components: {
-    Button
+    Button,
+    Popup
   },
 
   data: () => ({
@@ -47,16 +49,22 @@ export default {
 
   watch: {
     successClicked (val) {
+      if (!val) return
       this.type = 'success'
       this.opened = true
+      this.successClicked = false
     },
     errorClicked (val) {
+      if (!val) return
       this.type = 'error'
       this.opened = true
+      this.errorClicked = false
     },
     disabledClicked (val) {
+      if (!val) return
       this.type = 'disabled'
       this.opened = true
+      this.disabledClicked = false
     }
   }
 }
