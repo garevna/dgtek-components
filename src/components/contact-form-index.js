@@ -1,8 +1,8 @@
 import Vue from 'vue'
-import Polygons from './Polygons.vue'
+import UserContact from './UserContact.vue'
 
 const Components = {
-  Polygons
+  UserContact
 }
 
 Object.keys(Components).forEach(name => {
