@@ -1,4 +1,4 @@
-# dgtek-testimonials
+# dgtek-faq
 
 This component is designed to be utilized in dgtek.net projects only.
 
@@ -8,21 +8,21 @@ ____________________________________________
 
 ## install component
 ```
-yarn add dgtek-testimonials
+yarn add dgtek-faq
 ```
 
 ### Load the component and it's styles
 
 App.vue
 ```
-import 'dgtek-testimonials'
-import 'dgtek-testimonials/dist/dgtek-testimonials.css'
+import 'dgtek-faq'
+import 'dgtek-faq/dist/dgtek-faq.css'
 ```
 
 ### Use the component
 
 ```
-<Testimonials
+<FAQ
     :page.sync="page"
     :viewport="viewport"
 />
@@ -35,7 +35,7 @@ import 'dgtek-testimonials/dist/dgtek-testimonials.css'
 <template>
   <v-app>
     <v-main>
-      <Testimonials
+      <FAQ
         :page.sync="page"
         :viewport="viewport"
     />
@@ -47,13 +47,13 @@ import 'dgtek-testimonials/dist/dgtek-testimonials.css'
 
 import 'dgtek-styles'
 
-import Testimonials from '@/components/Testimonials.vue'
+import FAQ from '@/components/FAQ.vue'
 
 export default {
   name: 'App',
 
   components: {
-    Testimonials
+    FAQ
   },
 
   data: () => ({
