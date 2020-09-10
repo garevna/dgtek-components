@@ -1,4 +1,4 @@
-# dgtek-testimonials
+# dgtek-benefits
 
 This component is designed to be utilized in dgtek.net projects only.
 
@@ -8,21 +8,21 @@ ____________________________________________
 
 ## install component
 ```
-yarn add dgtek-testimonials
+yarn add dgtek-benefits
 ```
 
 ### Load the component and it's styles
 
 App.vue
 ```
-import 'dgtek-testimonials'
-import 'dgtek-testimonials/dist/dgtek-testimonials.css'
+import 'dgtek-benefits'
+import 'dgtek-benefits/dist/dgtek-benefits.css'
 ```
 
 ### Use the component
 
 ```
-<Testimonials
+<Benefits
     :page.sync="page"
     :viewport="viewport"
 />
@@ -35,7 +35,7 @@ import 'dgtek-testimonials/dist/dgtek-testimonials.css'
 <template>
   <v-app>
     <v-main>
-      <Testimonials
+      <Benefits
         :page.sync="page"
         :viewport="viewport"
     />
@@ -47,14 +47,11 @@ import 'dgtek-testimonials/dist/dgtek-testimonials.css'
 
 import 'dgtek-styles'
 
-import Testimonials from '@/components/Testimonials.vue'
+import 'dgtek-benefits'
+import 'dgtek-benefits/dist/dgtek-benefits.css'
 
 export default {
   name: 'App',
-
-  components: {
-    Testimonials
-  },
 
   data: () => ({
     page: '#top',
