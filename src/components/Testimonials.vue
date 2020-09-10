@@ -113,11 +113,25 @@
 
 <script>
 
+import { VContainer, VCard, VCardTitle, VCardText, VBtn, VSheet, VRow, VCarousel, VCarouselItem, VSlideGroup, VSlideItem, VScaleTransition } from 'vuetify/lib'
+
 import TestimonialsCard from '@/components/TestimonialsCard.vue'
 
 export default {
   name: 'Testimonials',
   components: {
+    VContainer,
+    VCard,
+    VCardTitle,
+    VCardText,
+    VBtn,
+    VSheet,
+    VRow,
+    VCarousel,
+    VCarouselItem,
+    VSlideGroup,
+    VSlideItem,
+    VScaleTransition,
     TestimonialsCard
   },
   props: ['page', 'viewport'],
