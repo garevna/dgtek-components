@@ -1,8 +1,8 @@
 import Vue from 'vue'
-import Testimonials from './Testimonials.vue'
+import FAQ from './FAQ.vue'
 
 const Components = {
-  Testimonials
+  FAQ
 }
 
 Object.keys(Components).forEach(name => {

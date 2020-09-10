@@ -1,22 +1,22 @@
 {
-  "name": "dgtek-testimonials",
+  "name": "dgtek-faq",
   "version": "0.0.1",
   "description": "Component for npm registry",
   "author": "garevna <irina.h.fylyppova@gmail.com>",
   "keywords": [
     "dgtek",
-    "testimonials",
+    "faq",
     "component",
     "npm",
     "registry",
-    "reviews"
+    "questions"
   ],
-  "repository": "https://github.com/garevna/dgtek-components/tree/testimonials",
-  "main": "./dist/dgtek-testimonials.common.js",
+  "repository": "https://github.com/garevna/dgtek-components/tree/faq",
+  "main": "./dist/dgtek-faq.common.js",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "package": "vue-cli-service build --target lib --name dgtek-testimonials ./src/components/testimonials-index.js",
+    "package": "vue-cli-service build --target lib --name dgtek-faq ./src/components/faq-index.js",
     "test:unit": "vue-cli-service test:unit",
     "lint": "vue-cli-service lint"
   },

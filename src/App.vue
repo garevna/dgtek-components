@@ -1,7 +1,7 @@
 <template>
   <v-app>
     <v-main>
-      <Testimonials
+      <FAQ
         :page.sync="page"
         :viewport="viewport"
     />
@@ -13,13 +13,13 @@
 
 import 'dgtek-styles'
 
-import Testimonials from '@/components/Testimonials.vue'
+import FAQ from '@/components/FAQ.vue'
 
 export default {
   name: 'App',
 
   components: {
-    Testimonials
+    FAQ
   },
 
   data: () => ({
