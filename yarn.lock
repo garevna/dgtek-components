@@ -3612,19 +3612,20 @@ detect-node@^2.0.4:
   resolved "https://registry.yarnpkg.com/detect-node/-/detect-node-2.0.4.tgz#014ee8f8f669c5c58023da64b8179c083a28c46c"
   integrity sha512-ZIzRpLJrOj7jjP2miAtgqIfmzbxa4ZOr5jJc601zklsfEx9oTzmmj2nVpIPRpNlRTIh8lc1kyViIY7BWSGNmKw==
 
-dgtek-popup@^0.0.1:
-  version "0.0.1"
-  resolved "https://registry.yarnpkg.com/dgtek-popup/-/dgtek-popup-0.0.1.tgz#123db8a8f6bcdfceaf44f85c7389d1601fbcfc50"
-  integrity sha512-DWpq3DGy34vuGJOsClR94zQ1ew69rIt6K7VzVKJ9lI04dl7j51NizQneHhxXAtduIeuzW4QI5D+4w+/1CJzcRA==
+dgtek-popup@^0.0.5:
+  version "0.0.5"
+  resolved "https://registry.yarnpkg.com/dgtek-popup/-/dgtek-popup-0.0.5.tgz#e42e16a35e607c7b97992ea1057ca250d4726a8a"
+  integrity sha512-dBpOErHxtEPNzm2weJ24eu1XehcFN5VP9LKtizofecQCC5FpuX4IY4g76xWY86M73m0zKewG8c5Dyt/kx5NDKA==
   dependencies:
     core-js "^3.6.5"
+    dgtek-styles "^0.0.8"
     vue "^2.6.11"
     vuetify "^2.2.11"
 
-dgtek-styles@^0.0.5:
-  version "0.0.5"
-  resolved "https://registry.yarnpkg.com/dgtek-styles/-/dgtek-styles-0.0.5.tgz#6197ab80dcc01c3eb1a1f84db4a9bd27dc2c3516"
-  integrity sha512-jdYkBaYQhQq/Zz/uUZk4DktM5kZ97Ss70XBcFpBOBY3yDe+XnLLpUT42YJZKDuoJpAD5QNK9ZsMrbARbmvJf2w==
+dgtek-styles@^0.0.8:
+  version "0.0.8"
+  resolved "https://registry.yarnpkg.com/dgtek-styles/-/dgtek-styles-0.0.8.tgz#73acf9532d8fe923a5eb3cc3bc53ea26ce09cc34"
+  integrity sha512-ndpkIv/x9YURtmrSi3arS/viPLlMBzXuseF4f9idQyUYAy+M+0b5nQlFnH+nv4bNscl9XMuL5JLpJpdqHtGupQ==
 
 diff-sequences@^24.9.0:
   version "24.9.0"

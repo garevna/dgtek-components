@@ -32,12 +32,6 @@ export default {
     mailEndpoint: 'https://dka.dgtek.net/api/frontend/mail/land'
   }),
 
-  watch: {
-    // saveData (val) {
-    //   if (val) this.save()
-    // }
-  },
-
   methods: {
     async getData () {
       const content = await (await fetch('https://api.pineapple.net.au/content/dgtek-1')).json()

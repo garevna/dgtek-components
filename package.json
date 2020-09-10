@@ -27,8 +27,8 @@
   ],
   "dependencies": {
     "core-js": "^3.6.5",
-    "dgtek-popup": "^0.0.1",
-    "dgtek-styles": "^0.0.5",
+    "dgtek-popup": "^0.0.5",
+    "dgtek-styles": "^0.0.8",
     "vue": "^2.6.11",
     "vuetify": "^2.2.11"
   },
