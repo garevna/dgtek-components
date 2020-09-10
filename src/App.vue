@@ -1,11 +1,9 @@
 <template>
   <v-app>
-    <v-main id="dgtek-polygons">
-      <UserContact
-        :userForm="userForm"
-        :emailSubject="emailSubject"
-        :emailText="emailText"
-        :emailEndpoint="mailEndpoint"
+    <v-main>
+      <Testimonials
+        :page.sync="page"
+        :viewport="viewport"
     />
     </v-main>
   </v-app>
@@ -14,37 +12,41 @@
 <script>
 
 import 'dgtek-styles'
-import 'dgtek-popup'
 
-import UserContact from '@/components/UserContact.vue'
+import Testimonials from '@/components/Testimonials.vue'
 
 export default {
   name: 'App',
 
   components: {
-    UserContact
+    Testimonials
   },
 
   data: () => ({
-    userForm: null,
-    emailSubject: '',
-    emailText: '',
-    mailEndpoint: 'https://dka.dgtek.net/api/frontend/mail/land'
+    page: '#top',
+    viewport: {
+      width: window.innerWidth,
+      height: window.innerHeight
+    }
   }),
 
   methods: {
-    async getData () {
+    onResize () {
+      this.viewport.width = window.innerWidth
+      this.viewport.height = window.innerHeight
+    },
+    async getContent () {
       const content = await (await fetch('https://api.pineapple.net.au/content/dgtek-1')).json()
       Object.keys(content).forEach((item) => {
         sessionStorage.setItem(item, JSON.stringify(content[item]))
       })
-      this.emailSubject = content.emailSubject
-      this.emailText = content.emailText
-      this.userForm = content.userForm
     }
   },
-  beforeMount () {
-    this.getData()
+  created () {
+    this.getContent()
+  },
+  mounted () {
+    window.addEventListener('resize', this.onResize, { passive: true })
   }
 }
 </script>

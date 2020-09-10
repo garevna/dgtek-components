@@ -1,22 +1,22 @@
 {
-  "name": "dgtek-contact-form",
+  "name": "dgtek-testimonials",
   "version": "0.0.1",
   "description": "Component for npm registry",
   "author": "garevna <irina.h.fylyppova@gmail.com>",
   "keywords": [
     "dgtek",
-    "contact",
+    "testimonials",
     "component",
     "npm",
     "registry",
-    "form"
+    "reviews"
   ],
-  "repository": "https://github.com/garevna/dgtek-components/tree/contact-form",
-  "main": "./dist/dgtek-contact-form.common.js",
+  "repository": "https://github.com/garevna/dgtek-components/tree/testimonials",
+  "main": "./dist/dgtek-testimonials.common.js",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "package": "vue-cli-service build --target lib --name dgtek-contact-form ./src/components/contact-form-index.js",
+    "package": "vue-cli-service build --target lib --name dgtek-testimonials ./src/components/testimonials-index.js",
     "test:unit": "vue-cli-service test:unit",
     "lint": "vue-cli-service lint"
   },
@@ -27,7 +27,6 @@
   ],
   "dependencies": {
     "core-js": "^3.6.5",
-    "dgtek-popup": "^0.0.5",
     "dgtek-styles": "^0.0.8",
     "vue": "^2.6.11",
     "vuetify": "^2.2.11"

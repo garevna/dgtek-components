@@ -1,8 +1,8 @@
 import Vue from 'vue'
-import UserContact from './UserContact.vue'
+import Testimonials from './Testimonials.vue'
 
 const Components = {
-  UserContact
+  Testimonials
 }
 
 Object.keys(Components).forEach(name => {
