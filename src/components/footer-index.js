@@ -1,8 +1,8 @@
 import Vue from 'vue'
-import AppHeader from './AppHeader.vue'
+import Footer from './Footer.vue'
 
 const Components = {
-  AppHeader
+  Footer
 }
 
 Object.keys(Components).forEach(name => {

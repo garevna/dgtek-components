@@ -1,24 +1,24 @@
 {
-  "name": "dgtek-app-header",
-  "version": "0.0.4",
+  "name": "dgtek-footer",
+  "version": "0.0.1",
   "description": "Component for npm registry",
   "author": "garevna <irina.h.fylyppova@gmail.com>",
   "keywords": [
     "dgtek",
     "app",
-    "header",
+    "footer",
     "navigation",
     "component",
     "npm",
     "registry",
     "logo"
   ],
-  "repository": "https://github.com/garevna/dgtek-components/tree/app-header",
-  "main": "./dist/dgtek-app-header.common.js",
+  "repository": "https://github.com/garevna/dgtek-components/tree/footer",
+  "main": "./dist/dgtek-footer.common.js",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "package": "vue-cli-service build --target lib --name dgtek-app-header ./src/components/app-header-index.js",
+    "package": "vue-cli-service build --target lib --name dgtek-footer ./src/components/footer-index.js",
     "test:unit": "vue-cli-service test:unit",
     "lint": "vue-cli-service lint"
   },

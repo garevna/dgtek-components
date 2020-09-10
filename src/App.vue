@@ -1,7 +1,7 @@
 <template>
   <v-app>
     <v-main>
-      <AppHeader
+      <Footer
         :page.sync="page"
         :viewport="viewport"
     />
@@ -13,13 +13,13 @@
 
 import 'dgtek-styles'
 
-import AppHeader from '@/components/AppHeader.vue'
+import Footer from '@/components/Footer.vue'
 
 export default {
   name: 'App',
 
   components: {
-    AppHeader
+    Footer
   },
 
   data: () => ({
