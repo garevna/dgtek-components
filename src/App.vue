@@ -1,7 +1,7 @@
 <template>
   <v-app>
     <v-main>
-      <Benefits
+      <AppHeader
         :page.sync="page"
         :viewport="viewport"
     />
@@ -13,13 +13,13 @@
 
 import 'dgtek-styles'
 
-import Benefits from '@/components/Benefits.vue'
+import AppHeader from '@/components/AppHeader.vue'
 
 export default {
   name: 'App',
 
   components: {
-    Benefits
+    AppHeader
   },
 
   data: () => ({

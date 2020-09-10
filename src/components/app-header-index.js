@@ -1,8 +1,8 @@
 import Vue from 'vue'
-import Benefits from './Benefits.vue'
+import AppHeader from './AppHeader.vue'
 
 const Components = {
-  Benefits
+  AppHeader
 }
 
 Object.keys(Components).forEach(name => {

@@ -1,4 +1,4 @@
-# dgtek-benefits
+# dgtek-app-header
 
 This component is designed to be utilized in dgtek.net projects only.
 
@@ -8,21 +8,21 @@ ____________________________________________
 
 ## install component
 ```
-yarn add dgtek-benefits
+yarn add dgtek-app-header
 ```
 
 ### Load the component and it's styles
 
 App.vue
 ```
-import 'dgtek-benefits'
-import 'dgtek-benefits/dist/dgtek-benefits.css'
+import 'dgtek-app-header'
+import 'dgtek-app-header/dist/dgtek-app-header.css'
 ```
 
 ### Use the component
 
 ```
-<Benefits
+<AppHeader
     :page.sync="page"
     :viewport="viewport"
 />
@@ -35,7 +35,7 @@ import 'dgtek-benefits/dist/dgtek-benefits.css'
 <template>
   <v-app>
     <v-main>
-      <Benefits
+      <AppHeader
         :page.sync="page"
         :viewport="viewport"
     />
@@ -47,8 +47,8 @@ import 'dgtek-benefits/dist/dgtek-benefits.css'
 
 import 'dgtek-styles'
 
-import 'dgtek-benefits'
-import 'dgtek-benefits/dist/dgtek-benefits.css'
+import 'dgtek-app-header'
+import 'dgtek-app-header/dist/dgtek-app-header.css'
 
 export default {
   name: 'App',
