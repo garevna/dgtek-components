@@ -1,4 +1,4 @@
-# dgtek-app-header
+# dgtek-footer
 
 This component is designed to be utilized in dgtek.net projects only.
 
@@ -8,21 +8,21 @@ ____________________________________________
 
 ## install component
 ```
-yarn add dgtek-app-header
+yarn add dgtek-footer
 ```
 
 ### Load the component and it's styles
 
 App.vue
 ```
-import 'dgtek-app-header'
-import 'dgtek-app-header/dist/dgtek-app-header.css'
+import 'dgtek-footer'
+import 'dgtek-footer/dist/dgtek-footer.css'
 ```
 
 ### Use the component
 
 ```
-<AppHeader
+<Footer
     :page.sync="page"
     :viewport="viewport"
 />
@@ -35,8 +35,7 @@ import 'dgtek-app-header/dist/dgtek-app-header.css'
 <template>
   <v-app>
     <v-main>
-      <AppHeader
-        :page.sync="page"
+      <Footer
         :viewport="viewport"
     />
     </v-main>
@@ -74,7 +73,7 @@ export default {
     }
   },
   created () {
-    this.getContent()
+    if (!sessionStorage.getItem('footer')) this.getContent()
   },
   mounted () {
     window.addEventListener('resize', this.onResize, { passive: true })

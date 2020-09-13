@@ -1,14 +1,13 @@
 <template>
   <v-container>
-    <v-row class="mx-auto">
-      <v-col cols="12" xl="10" class="mx-auto">
-        <v-row>
-          <v-col cols="12" lg="4">
+    <v-row class="mx-auto" align="center" justify="center">
+      <v-col cols="12" lg="10" class="mx-auto">
+        <v-row justify="center">
+          <v-col cols="12" sm="5" md="4" lg="3">
             <v-card flat class="transparent mx-auto">
-              <v-card-actions>
+              <v-card-text>
                 <Logo />
-                <!-- <v-img src="@/assets/logo.png" width="80" height="52" contain position="left center" style="margin-left: 8px;"></v-img> -->
-              </v-card-actions>
+              </v-card-text>
               <v-card-title>
                 <h6>About us</h6>
               </v-card-title>
@@ -19,7 +18,7 @@
               </v-card-text>
             </v-card>
           </v-col>
-          <v-col cols="12" lg="2">
+          <v-col cols="12" sm="3" md="3" lg="2">
             <v-card flat class="transparent mx-auto">
               <v-card-title>
                 <h6>Company</h6>
@@ -33,7 +32,7 @@
               </v-card-text>
             </v-card>
           </v-col>
-          <v-col cols="12" lg="2">
+          <v-col cols="12" sm="3" md="3" lg="2">
             <v-card flat class="transparent mx-auto">
               <v-card-title>
                 <h6>Products</h6>
@@ -48,19 +47,19 @@
               </v-card-text>
             </v-card>
           </v-col>
-          <v-col cols="12" lg="2">
+          <v-col cols="12" sm="3" md="3" lg="2">
             <v-card flat class="transparent mx-auto">
               <v-card-title>
                 <h6>Client</h6>
               </v-card-title>
               <v-card-text>
-                <p>Website Disclaimer</p>
-                <p>Terms & Conditions</p>
-                <p>DGTek Privacy Policy</p>
+                <p><a href="https://dgtek.net/disclaimer" target="_blank">Website Disclaimer</a></p>
+                <p><a href="https://dgtek.net/terms-and-conditions" target="_blank">Terms & Conditions</a></p>
+                <p><a href="https://dgtek.net/privacy-policy" target="_blank">DGTek Privacy Policy</a></p>
               </v-card-text>
             </v-card>
           </v-col>
-          <v-col cols="12" lg="2">
+          <v-col cols="12" sm="3" md="3" lg="2">
             <v-card flat class="transparent mx-auto">
               <v-card-title>
                 <h6>Contacts</h6>
@@ -155,6 +154,9 @@ export default {
     email: 'mailto:info@dgtek.net',
     phone: '1800 359 602',
     abn: '61 600 896 115'
-  })
+  }),
+  mounted () {
+    console.log(this)
+  }
 }
 </script>

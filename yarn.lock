@@ -3612,6 +3612,57 @@ detect-node@^2.0.4:
   resolved "https://registry.yarnpkg.com/detect-node/-/detect-node-2.0.4.tgz#014ee8f8f669c5c58023da64b8179c083a28c46c"
   integrity sha512-ZIzRpLJrOj7jjP2miAtgqIfmzbxa4ZOr5jJc601zklsfEx9oTzmmj2nVpIPRpNlRTIh8lc1kyViIY7BWSGNmKw==
 
+dgtek-app-header@^0.0.4:
+  version "0.0.4"
+  resolved "https://registry.yarnpkg.com/dgtek-app-header/-/dgtek-app-header-0.0.4.tgz#c0746a5dd44c3f8fc25ea6d75b6bdeabbd210fb4"
+  integrity sha512-n1V/0wvYmo5EEOiIP72fBIZ87kSL9ZMvx9dynk86ht01iMnWMeMJko1d3ADNnPobwMQjg1RDPeJ0/wMBsOCE6w==
+  dependencies:
+    core-js "^3.6.5"
+    dgtek-styles "^0.0.8"
+    vue "^2.6.11"
+    vuetify "^2.2.11"
+
+dgtek-benefits@^0.0.1:
+  version "0.0.1"
+  resolved "https://registry.yarnpkg.com/dgtek-benefits/-/dgtek-benefits-0.0.1.tgz#3d54567b63c45d1147ce443b5ba43d4a194bd83b"
+  integrity sha512-DehPZMAaB5OYwSt2NFL0/USuDpcSab9ep4dKatByKEYm69qpK63/ahPTybA+A0CcTKwMRIL8Wdfl7FqFfVVisg==
+  dependencies:
+    core-js "^3.6.5"
+    dgtek-styles "^0.0.8"
+    vue "^2.6.11"
+    vuetify "^2.2.11"
+
+dgtek-contact-form@^0.0.1:
+  version "0.0.1"
+  resolved "https://registry.yarnpkg.com/dgtek-contact-form/-/dgtek-contact-form-0.0.1.tgz#e9bae10115bd30e0f261085ae98f8244da68349f"
+  integrity sha512-b9EQr7o5QqQdmMC2BPl0pmNNdgkIhObl3rOXJA8xaWWh3yz2WrDWKtZFeCyMIRMgfEZIl4kYLJgkWHRMFX1nwA==
+  dependencies:
+    core-js "^3.6.5"
+    dgtek-popup "^0.0.5"
+    dgtek-styles "^0.0.8"
+    vue "^2.6.11"
+    vuetify "^2.2.11"
+
+dgtek-faq@^0.0.1:
+  version "0.0.1"
+  resolved "https://registry.yarnpkg.com/dgtek-faq/-/dgtek-faq-0.0.1.tgz#63acb87fa4a6d7a3f031c1a66ca82ccc8d18a995"
+  integrity sha512-VsSv/lEimALu2FnNENxOtUt0VVHSHGCHZEMLbZW4oBFxkU7lXqitx2FRBI75z1tyreVi6SlBmFJZddIiVc0hVQ==
+  dependencies:
+    core-js "^3.6.5"
+    dgtek-styles "^0.0.8"
+    vue "^2.6.11"
+    vuetify "^2.2.11"
+
+dgtek-footer@^0.0.1:
+  version "0.0.1"
+  resolved "https://registry.yarnpkg.com/dgtek-footer/-/dgtek-footer-0.0.1.tgz#b0625f67f77b31f04f0621711a6828b057246661"
+  integrity sha512-nkG7v4wN6D21vScYQ1VntzqM8SjInEECC6QTqXeQwMTSrwpSTKOWLV06mQXt7iUobepWCmY1TqvnwFrwWhbxnA==
+  dependencies:
+    core-js "^3.6.5"
+    dgtek-styles "^0.0.8"
+    vue "^2.6.11"
+    vuetify "^2.2.11"
+
 dgtek-popup@^0.0.5:
   version "0.0.5"
   resolved "https://registry.yarnpkg.com/dgtek-popup/-/dgtek-popup-0.0.5.tgz#e42e16a35e607c7b97992ea1057ca250d4726a8a"
@@ -3626,6 +3677,16 @@ dgtek-styles@^0.0.8:
   version "0.0.8"
   resolved "https://registry.yarnpkg.com/dgtek-styles/-/dgtek-styles-0.0.8.tgz#73acf9532d8fe923a5eb3cc3bc53ea26ce09cc34"
   integrity sha512-ndpkIv/x9YURtmrSi3arS/viPLlMBzXuseF4f9idQyUYAy+M+0b5nQlFnH+nv4bNscl9XMuL5JLpJpdqHtGupQ==
+
+dgtek-testimonials@^0.0.4:
+  version "0.0.4"
+  resolved "https://registry.yarnpkg.com/dgtek-testimonials/-/dgtek-testimonials-0.0.4.tgz#3dda7206fa31b4c7aed21cd573e296800287a1c6"
+  integrity sha512-7HMUxwbRUKa5ma4V/yXL2ryceq+Zb/TOkUj6HBmmmyTcRDHbiQkN19P9xjeMarFRLd7UpgWkljPiN08CDt6GUA==
+  dependencies:
+    core-js "^3.6.5"
+    dgtek-styles "^0.0.8"
+    vue "^2.6.11"
+    vuetify "^2.2.11"
 
 diff-sequences@^24.9.0:
   version "24.9.0"
