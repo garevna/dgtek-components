@@ -3663,6 +3663,22 @@ dgtek-footer@^0.0.1:
     vue "^2.6.11"
     vuetify "^2.2.11"
 
+dgtek-footer@^0.0.4:
+  version "0.0.4"
+  resolved "https://registry.yarnpkg.com/dgtek-footer/-/dgtek-footer-0.0.4.tgz#8076aaa8cb543b55a6d1487d0c9c7494fdb9b469"
+  integrity sha512-O89UaFguHGFugj3uggVqSqAaVjo6D/M13cPxgfVJtp2xoo1mxOO3Oo5oobKId4yMrDbaAP1xqJZkBU8tu45PQA==
+  dependencies:
+    core-js "^3.6.5"
+    dgtek-app-header "^0.0.4"
+    dgtek-benefits "^0.0.1"
+    dgtek-contact-form "^0.0.1"
+    dgtek-faq "^0.0.1"
+    dgtek-footer "^0.0.1"
+    dgtek-styles "^0.0.8"
+    dgtek-testimonials "^0.0.4"
+    vue "^2.6.11"
+    vuetify "^2.2.11"
+
 dgtek-popup@^0.0.5:
   version "0.0.5"
   resolved "https://registry.yarnpkg.com/dgtek-popup/-/dgtek-popup-0.0.5.tgz#e42e16a35e607c7b97992ea1057ca250d4726a8a"

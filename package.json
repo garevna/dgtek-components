@@ -33,7 +33,7 @@
     "dgtek-benefits": "^0.0.1",
     "dgtek-contact-form": "^0.0.1",
     "dgtek-faq": "^0.0.1",
-    "dgtek-footer": "^0.0.1",
+    "dgtek-footer": "^0.0.4",
     "dgtek-styles": "^0.0.8",
     "dgtek-testimonials": "^0.0.4",
     "vue": "^2.6.11",

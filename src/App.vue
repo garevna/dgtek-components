@@ -38,18 +38,16 @@ import 'dgtek-faq/dist/dgtek-faq.css'
 import 'dgtek-benefits'
 import 'dgtek-benefits/dist/dgtek-benefits.css'
 
-// import 'dgtek-footer'
-// import 'dgtek-footer/dist/dgtek-footer.css'
+import 'dgtek-footer'
+import 'dgtek-footer/dist/dgtek-footer.css'
 
-import Footer from '@/components/Footer.vue'
-
-console.log(Footer)
+// import Footer from '@/components/Footer.vue'
 
 export default {
   name: 'App',
-  components: {
-    Footer
-  },
+  // components: {
+  //   Footer
+  // },
   data: () => ({
     page: '#top',
     viewport: {
