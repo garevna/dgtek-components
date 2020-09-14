@@ -1,7 +1,7 @@
 <template>
   <v-container fluid class="homefone">
 
-    <v-card flat class="transparent mx-auto mt-12 mb-0 text-center" max-width="960">
+    <v-card flat class="transparent mx-auto mt-12 mb-0 text-center" max-width="1118">
       <v-card-title class="text-center" max-width="940">
         <h2 style="width: 100%; text-align: center">{{ content.header }}</h2>
       </v-card-title>
@@ -20,7 +20,7 @@
         >
           <v-card
             flat
-            class="ma-4"
+            class="ma-8"
             height="320"
             width="auto"
             @click="toggle"
